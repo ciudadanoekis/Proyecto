@@ -1,0 +1,159 @@
+@font-face {
+    font: {
+        family: $fontlight;
+        weight: normal;
+        style: normal;
+    }
+
+    src: url('assets/fonts/NBInternationalProEditionWeb/nb_international_pro_light-webfont.eot');
+    src: url('assets/fonts/NBInternationalProEditionWeb/nb_international_pro_light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('assets/fonts/NBInternationalProEditionWeb/nb_international_pro_light-webfont.woff2') format('woff2'),
+         url('assets/fonts/NBInternationalProEditionWeb/nb_international_pro_light-webfont.woff') format('woff'),
+         url('assets/fonts/NBInternationalProEditionWeb/nb_international_pro_light-webfont.ttf') format('truetype');
+}
+
+@font-face {
+    font: {
+        family: $fontregular;
+        weight: normal;
+        style: normal;
+    }
+
+    src: url('assets/fonts/NBInternationalProEditionWeb/nb_international_pro_regular-webfont.eot');
+    src: url('assets/fonts/NBInternationalProEditionWeb/nb_international_pro_regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('assets/fonts/NBInternationalProEditionWeb/nb_international_pro_regular-webfont.woff2') format('woff2'),
+         url('assets/fonts/NBInternationalProEditionWeb/nb_international_pro_regular-webfont.woff') format('woff'),
+         url('assets/fonts/NBInternationalProEditionWeb/nb_international_pro_regular-webfont.ttf') format('truetype');
+}
+
+@font-face {
+    font: {
+        family: $fontbold;
+        weight: normal;
+        style: normal;
+    }
+
+    src: url('assets/fonts/NBInternationalProEditionWeb/nb_international_pro_bold-webfont.eot');
+    src: url('assets/fonts/NBInternationalProEditionWeb/nb_international_pro_bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('assets/fonts/NBInternationalProEditionWeb/nb_international_pro_bold-webfont.woff2') format('woff2'),
+         url('assets/fonts/NBInternationalProEditionWeb/nb_international_pro_bold-webfont.woff') format('woff'),
+         url('assets/fonts/NBInternationalProEditionWeb/nb_international_pro_bold-webfont.ttf') format('truetype');
+}
+
+* {
+    &:focus,
+    &:active {
+        outline: 0;
+    }
+}
+
+html {
+    font: {
+        family: $fontregular, 'Helvetica', 'Arial';
+        size: $size;
+        weight: 400;
+        style: sans-serif;
+    }
+}
+
+body {
+    background-color: $dark;
+    color: $light;
+    overflow-x: hidden;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    padding: 30px 33px 30px 33px;
+
+    .logo {
+        display: inline-block;
+        padding: 0 30px 0 0;
+
+        h1 {
+            a {
+                transition-duration: .2s;
+            }
+        }
+    }
+
+    .menu {
+        font-family: $fontlight;
+        display: inline-block;
+
+        nav {
+            ul {
+                li {
+                    display: inline-block;
+                    margin: 0 .5rem 0 0;
+                    transition-duration: .2s;
+
+                    &:hover {
+                        color: $accent;
+                        cursor: pointer;
+                    }
+
+                    &.active {
+                        text-decoration: underline;
+                    }
+
+                    &:focus,
+                    &:active {
+                        outline: 0;
+                    }
+                }
+
+                input {
+                    font-family: $fontlight;
+                    color: $light;
+                    padding: 0 0 0 3px;
+                    opacity: 1;
+                    background-color: transparent;
+                    border: 2px solid $light;
+                }
+            }
+        }
+    }
+}
+
+main {
+    padding: 2.6rem 0 0 0;
+}
+
+a {
+    color: $light;
+
+    &:hover {
+        color: $accent;
+        outline: 0;
+    }
+}
+
+.row {
+    clear: both;
+    content: "";
+    height: 0;
+    display: block;
+}
+
+.col-12 {
+    padding: 0;
+}
+
+.full {
+    width: 100%;
+}
+
+.mid {
+    width: 50%;
+}
+
+.hoverdark {  
+    &:hover {
+      span {
+            background-color: $dark !important;
+        }
+    }
+}

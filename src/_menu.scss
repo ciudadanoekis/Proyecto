@@ -1,0 +1,96 @@
+#hamburger-button {
+  text-align: right;
+  position: fixed;
+  top: 33px;
+  right: 33px;
+  z-index: 9999;
+  display: inline-block;
+  vertical-align: top;
+  width: 40px;
+
+  &:hover {
+    cursor: pointer;
+    span {
+      background-color: $accent;
+    }
+  }
+}
+
+#hamburger-button > span {
+  display: block;
+  height: 2px;
+  margin-bottom: 7px;
+  width: 40px;
+  background-color: $light;
+  -webkit-transition-timing-function: linear;
+     -moz-transition-timing-function: linear;
+      -ms-transition-timing-function: linear;
+       -o-transition-timing-function: linear;
+          transition-timing-function: linear;
+  transition-duration: .2s;
+}
+
+#hamburger-button.open > span:first-child {
+  -webkit-transform: translateY(9px) rotate(45deg);
+     -moz-transform: translateY(9px) rotate(45deg);
+      -ms-transform: translateY(9px) rotate(45deg);
+       -o-transform: translateY(9px) rotate(45deg);
+          transform: translateY(9px) rotate(45deg);
+}
+
+#hamburger-button.open {
+  &:hover {
+    span {
+      background-color: $dark;
+    }
+  }
+}
+
+#hamburger-button.open > span:nth-child(2) {
+  -webkit-transform: rotateY(90deg);
+     -moz-transform: rotateY(90deg);
+      -ms-transform: rotateY(90deg);
+       -o-transform: rotateY(90deg);
+          transform: rotateY(90deg);
+}
+
+#hamburger-button.open > span:last-child {
+  -webkit-transform: translateY(-9px) rotate(-45deg);
+     -moz-transform: translateY(-9px) rotate(-45deg);
+      -ms-transform: translateY(-9px) rotate(-45deg);
+       -o-transform: translateY(-9px) rotate(-45deg);
+          transform: translateY(-9px) rotate(-45deg);
+}
+
+.navbar {
+  position: absolute;
+  z-index: 9998;
+  height: 100vh;
+  width: 450px;
+  top: 0;
+  bottom: 0;
+  right: -450px;
+  transition: .6s;
+  background-color: $accent;
+  color: $light;
+  display: inline-block;
+  padding: 33px;
+}
+
+.navbar.open {
+  right: 0;
+}
+
+.navbar ul {
+  list-style: none;
+  font-size: 1.5rem;
+}
+
+.navbar ul li {
+  margin: 0 0 .4rem 0;
+}
+
+.navbar ul li:hover {
+  cursor: pointer;
+  color: $dark;
+}

@@ -1,0 +1,51 @@
+<form [formGroup]="storeLog" (ngSubmit)="onStoreLog()">
+
+  <div>
+    <input type="text" name="name" formControlName="name"> Name
+  </div>
+  <div>
+    <input type="text" name="city" formControlName="city"> City
+  </div>
+  <div>
+    <input type="text" name="country" formControlName="country"> Country
+  </div>
+  <div>
+    <input type="text" name="continent" formControlName="continent"> Continent
+  </div>  
+  <div>
+    <input type="text" name="description" formControlName="description"> Description
+  </div>
+  <div>
+    <input type="text" name="address" formControlName="address"> Address
+  </div>
+  <div>
+    <input type="number" name="phonenumber" formControlName="phonenumber"> Phone Number
+  </div>
+  <div>
+    <input type="email" name="email" formControlName="email"> Email
+  </div>
+  <div>
+    <input type="number" name="rating" formControlName="rating"> Rating
+  </div>
+  <div>
+    <input type="number" name="longitude" formControlName="longitude"> Longitude
+  </div>
+  <div>
+    <input type="number" name="latitude" formControlName="latitude"> Latitude
+  </div>
+  <div>
+    <input type="text" name="facebook" formControlName="facebook"> Facebook
+  </div>
+  <div>
+    <input type="text" name="soundcloud" formControlName="soundcloud"> Soundcloud
+  </div>
+  <div>
+    <input type="text" name="instagram" formControlName="instagram"> Instagram
+  </div>
+  <div>
+    <input type="text" name="www" formControlName="www"> WWW
+  </div>
+  <div>
+    <input type="submit" value="Send" [disabled]="!storeLog.valid"> 
+  </div>
+</form>

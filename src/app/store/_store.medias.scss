@@ -1,0 +1,17 @@
+@media (max-width: 1024px) {
+    .store-title {
+        h2,
+        h3 {
+            font-size: 2.2rem;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .store-title {
+        h2,
+        h3 {
+            font-size: 1.45rem;
+        }
+    }
+}

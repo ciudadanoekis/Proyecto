@@ -1,0 +1,108 @@
+header {
+    padding: 30px 33px 0;
+    background-color: $dark;
+
+    table {
+        width: 100%;
+        margin: 20px 0 0 0;
+        background-color: transparent;
+
+        thead {
+            width: 100%;
+            background-color: $dark;
+            z-index: 98;
+            -webkit-box-shadow: 0 10px 13px 7px $dark;
+               -moz-box-shadow: 0 10px 13px 7px $dark;
+                -ms-box-shadow: 0 10px 13px 7px $dark;
+                 -o-box-shadow: 0 10px 13px 7px $dark;
+                    box-shadow: 0 10px 13px 7px $dark;
+
+            font: {
+                family: $fontregular, 'Helvetica', 'Arial';
+                weight: 400;
+                style: sans-serif;
+            }
+
+            tr {
+                width: 100%;
+                display: inline-block;
+                border-color: transparent;
+            }
+
+            th {
+                vertical-align: top;
+                display: inline-block;
+                padding: .3rem 0;
+                border: {
+                    color: $light;
+                    bottom: 2px solid $light;
+                    top: 0 transparent;
+                }
+
+                &:nth-child(1),
+                &:nth-child(2) {
+                    width: 23%;
+                    margin-right: 2%;
+                }
+
+                &:nth-child(3) {
+                    width: 50%;
+                }
+            }
+        }
+    }
+}
+
+main {
+    padding: 0;
+}
+
+.store-list {
+    display: inherit;
+    padding: 5.6rem 33px 1rem;
+
+    font: {
+        family: $fontlight, 'Helvetica', 'Arial';
+        weight: 200;
+        style: sans-serif;
+    }
+
+    table {
+        background-color: transparent;
+
+        thead {
+            margin: 40px 0 0 0;
+        }
+
+        tbody {
+            position: relative;
+
+            tr {
+                width: 100%;
+                display: inline-block;
+                transition-duration: .2s;
+
+                &:hover {
+                    color: $accent;
+                    cursor: pointer;
+                }
+            }
+
+            td {
+                vertical-align: top;
+                display: inline-block;
+                padding: .2rem 0;
+                border-color: transparent;
+
+                &:nth-child(1),
+                &:nth-child(2) {
+                    width: 25%;
+                }
+
+                &:nth-child(3) {
+                    width: 50%;
+                }
+            }
+        }
+    }
+}

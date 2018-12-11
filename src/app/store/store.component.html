@@ -1,0 +1,117 @@
+<header>
+     <div class="logo">
+          <h1><a href="#">RecordStoreDB</a></h1>
+     </div>
+     <div class="menu">
+          <nav>
+               <ul>
+                    <li>Info</li>
+                    <li>Adress</li>
+                    <li>Comments</li>
+               </ul>
+          </nav>
+     </div>
+</header>
+<main id="store">
+     <div class="row-1">
+          <div class="store-title">
+               <h2>{{store?.name}}</h2>
+               <h3>{{store?.city}}, {{store?.country}}</h3>
+          </div>
+          <div class="store-main full">
+               <div class="store-info mid">
+                    <div class="logo">
+                         <img src="../../assets/images/kh-vinyl-store.jpg" alt="La Discoteca: K&H Vinyl Store">
+                    </div>
+                    <div class="store-rating mid">
+                         <h4>Rating</h4>
+                         <div class="ui rating" data-max-rating="5"></div>
+                         <p>{{store?.rating}}</p>
+                    </div>
+                    <h4>Description</h4>
+                    <p>{{store?.description}}</p>
+                    <div class="accordion" id="accordionExample">
+                         <div class="card">
+                              <div class="card-header" id="headingOne">
+                                   <h4>
+                                        <button class="btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                                        aria-expanded="true" aria-controls="collapseOne">Opening Hours</button>
+                                   </h4>
+                              </div>
+                              <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                   <table class="card-body">
+                                        <tbody>
+                                             <tr>
+                                                  <td>Monday</td>
+                                                  <td>17:00</td>
+                                                  <td>–</td>
+                                                  <td>21:30</td>
+                                             </tr>
+                                             <tr>
+                                                  <td>Tuesday</td>
+                                                  <td>17:00</td>
+                                                  <td>–</td>
+                                                  <td>21:30</td>
+                                             </tr>
+                                             <tr>
+                                                  <td>Wednesday</td>
+                                                  <td>17:00</td>
+                                                  <td>–</td>
+                                                  <td>21:30</td>
+                                             </tr>
+                                             <tr>
+                                                  <td>Thursday</td>
+                                                  <td>17:00</td>
+                                                  <td>–</td>
+                                                  <td>21:30</td>
+                                             </tr>
+                                             <tr>
+                                                  <td>Friday</td>
+                                                  <td>17:00</td>
+                                                  <td>–</td>
+                                                  <td>21:30</td>
+                                             </tr>
+                                             <tr>
+                                                  <td>Saturday</td>
+                                                  <td>Closed</td>
+                                                  <td>–</td>
+                                                  <td>Closed</td>
+                                             </tr>
+                                             <tr>
+                                                  <td>Sunday</td>
+                                                  <td>Closed</td>
+                                                  <td>–</td>
+                                                  <td>Closed</td>
+                                             </tr>
+                                        </tbody>
+                                   </table>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="store-img mid">
+                         <img src="" alt="">
+                    </div>
+               </div>
+          </div>
+          <div class="row-2">
+               <div class="store-main">
+                    <div class="store-info">
+                         <h4>Adress</h4>
+                         <p>{{store?.address}}</p>
+                    </div>
+               
+               </div>
+          </div>
+          <agm-map [latitude]="lat" [longitude]="lng" [zoom]="16">
+               <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+          </agm-map>
+          <app-comments *ngIf="authService.isLoggedIn()"></app-comments>
+     </div>
+     <agm-map [latitude]="lat" [longitude]="lng" [zoom]="16">
+          <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+     </agm-map>
+     
+     <!-- la sentencia d abajo corresponde a la seccion de comentarios, que se activan al estar loggeado -->
+     <app-comments *ngIf="authService.isLoggedIn()"></app-comments>
+
+</main>

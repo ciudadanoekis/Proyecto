@@ -1,0 +1,36 @@
+#africa,
+#asia,
+#north-america,
+#south-america,
+#oceania {
+    display: inherit;
+}
+
+main {
+    padding: 2.3rem 7px 0;
+}
+
+#africa {
+    h2 {
+        padding-top: 24px;
+    }
+}
+
+.continent-title {
+    width: 100%;
+    background-color: $dark;
+    padding: 0 0 .05rem;
+    z-index: 99;
+
+    h2 {
+        font-size: 6.6rem;
+        line-height: .85;
+        padding: 0 0 0 20px;
+        text-transform: uppercase;
+
+        &:hover {
+            color: $accent;
+            cursor: pointer;
+        }
+    }
+}

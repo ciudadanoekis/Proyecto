@@ -1,0 +1,187 @@
+div[class^='col']{
+    padding: 0;
+}
+
+header {
+    padding: 33px;
+    background-color: $accentlight;
+    /* -webkit-box-shadow: 0 10px 13px 7px $accentlight;
+       -moz-box-shadow: 0 10px 13px 7px $accentlight;
+        -ms-box-shadow: 0 10px 13px 7px $accentlight;
+         -o-box-shadow: 0 10px 13px 7px $accentlight;
+            box-shadow: 0 10px 13px 7px $accentlight; */
+
+    .logo {
+        h1 {
+            a {
+                &:hover {
+                    color: $dark;
+                }
+            }
+        }
+    }
+    
+    .menu {
+        nav {
+            ul {
+                li {
+                    &:hover {
+                        color: $dark;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.row-1,
+.row-2 {
+    background-color: $accentlight;
+}
+
+.store-title {
+    width: 100%;
+    padding: 20px 33px 33px;
+
+    h2,
+    h3 {
+        font-size: 2.7rem;
+    }
+
+    h3 {
+        font-family: $fontlight, 'Helvetica', 'Arial';
+    }
+}
+
+.store-main {
+    padding: 0 33px 33px;
+
+    .store-info {
+        .logo {
+            width: 8.2rem;
+            margin: 0 0 1rem 0;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .table,
+        .table-dark {
+            background-color: transparent;
+            font-family: $fontlight;
+
+            tr {
+                border-color: transparent;
+
+                td {
+                    padding: 0;
+                    line-height: 1.2rem;
+                    border-color: transparent;
+                }
+            }
+        }
+    }
+
+    .store-img {
+        padding: 0 30px 30px 15px;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .map {
+            width: 100%;
+            height: 400px;
+        }
+    }
+
+    .store-info,
+    .store-img,
+    .store-rating {
+        display: inline-block;
+        vertical-align: top;
+
+        h4 {
+            line-height: 1.2rem;
+            margin: .5rem 0 0;
+        }
+
+        h4:nth-child(1) {
+            margin: 0;
+        }
+        
+        p {
+            font-family: $fontlight;
+            line-height: 1.2rem;
+        }
+    }
+}
+
+#hamburger-button {
+    span {
+        &:hover {
+            color: $dark;
+        }
+    }
+}
+
+.card {
+    border: 0;
+    background-color: transparent;
+
+    .card-header {
+        border: 0;
+        background-color: transparent;
+        padding: 0;
+        text-decoration: none;
+
+        .btn-link {
+            line-height: 1.2rem;
+            border: 0;
+            color: $light;
+            text-align: left;
+            margin: .5rem 0 0;
+            padding: 0;
+            text-decoration: underline;
+            transition-duration: .2s;
+        
+            &:hover {
+                background-color: transparent;
+                border: 0;
+                color: $dark;
+                cursor: pointer;
+            }
+        
+            &:focus {
+                outline: 0;
+            }
+        }
+    }
+
+    .card-body {
+        font-family: $fontlight;
+
+        tr {
+            td {
+                padding: .1rem .2rem;
+                text-align: center;
+
+                &:nth-child(1) {
+                    text-align: left;
+                    padding: .1rem 2rem .1rem 0;
+                }
+
+                &:nth-child(3) {
+                    text-align: left;
+                    padding: .1rem .2rem .1rem .4rem;
+                }
+            }
+        }
+    }
+}
+
+agm-map {
+    height: 400px;
+}

@@ -1,0 +1,54 @@
+@media (max-width: 1024px) {
+    html {
+        font-size: 18px;
+    }
+
+    header {
+        .navbar {
+            width: 100vw;
+            right: -100vw;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    html {
+        font-size: 14px;
+    }
+
+    header {
+        padding: 15px 15px 15px 30px;
+
+        .logo {
+            width: 100%;
+            padding: 0 30px 15px 0;
+        }
+
+        .menu {
+            font-family: $fontlight;
+            display: inline-block;
+
+            nav {
+                ul {
+                    li {
+                        display: inline-block;
+                        margin: 0 .5rem 0 0;
+
+                        &:hover {
+                            color: $accent;
+                            cursor: pointer;
+                        }
+
+                        &.active {
+                            text-decoration: underline;
+                        }
+                    }
+
+                    input {
+                        margin-top: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
