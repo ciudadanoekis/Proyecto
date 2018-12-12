@@ -1,51 +1,68 @@
-<form [formGroup]="storeLog" (ngSubmit)="onStoreLog()">
-
-  <div>
-    <input type="text" name="name" formControlName="name"> Name
+<app-header></app-header>
+<main>
+  <div class="mid login">
+    <form [formGroup]="storeLog" (ngSubmit)="onStoreLog()">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" name="name" formControlName="name">
+      </div>
+      <div class="form-group">
+        <label for="city">City</label>
+        <input type="text" name="city" formControlName="city">
+      </div>
+      <div class="form-group">
+        <label for="country">Country</label>
+        <input type="text" name="country" formControlName="country">
+      </div>
+      <div class="form-group">
+        <label for="continent">Continent</label>
+        <input type="text" name="continent" formControlName="continent">
+      </div>  
+      <div class="form-group">
+        <label for="description">Description</label>
+        <input type="text" name="description" formControlName="description">
+      </div>
+      <div class="form-group">
+        <label for="adress">Adress</label>
+        <input type="text" name="address" formControlName="address">
+      </div>
+      <div class="form-group">
+        <label for="phonenumber">Phone Number</label>
+        <input type="number" name="phonenumber" formControlName="phonenumber">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" name="email" formControlName="email">
+      </div>
+      <div class="form-group">
+        <label for="rating">Rating</label>
+        <input type="number" name="rating" formControlName="rating">
+      </div>
+      <div class="form-group">
+        <label for="longitude">Longitude</label>
+        <input type="number" name="longitude" formControlName="longitude">
+      </div>
+      <div class="form-group">
+        <label for="latitude">Latitude</label>
+        <input type="number" name="latitude" formControlName="latitude">
+      </div>
+      <div class="form-group">
+        <label for="facebook">Facebook</label>
+        <input type="text" name="facebook" formControlName="facebook">
+      </div>
+      <div class="form-group">
+        <label for="soundcloud">Soundcloud</label>
+        <input type="text" name="soundcloud" formControlName="soundcloud">
+      </div>
+      <div class="form-group">
+        <label for="instagram">Instagram</label>
+        <input type="text" name="instagram" formControlName="instagram">
+      </div>
+      <div class="form-group">
+        <label for="www">Website</label>
+        <input type="text" name="www" formControlName="www">
+      </div>
+      <input type="submit" value="Submit" [disabled]="!storeLog.valid" class="submit-button"> 
+    </form>
   </div>
-  <div>
-    <input type="text" name="city" formControlName="city"> City
-  </div>
-  <div>
-    <input type="text" name="country" formControlName="country"> Country
-  </div>
-  <div>
-    <input type="text" name="continent" formControlName="continent"> Continent
-  </div>  
-  <div>
-    <input type="text" name="description" formControlName="description"> Description
-  </div>
-  <div>
-    <input type="text" name="address" formControlName="address"> Address
-  </div>
-  <div>
-    <input type="number" name="phonenumber" formControlName="phonenumber"> Phone Number
-  </div>
-  <div>
-    <input type="email" name="email" formControlName="email"> Email
-  </div>
-  <div>
-    <input type="number" name="rating" formControlName="rating"> Rating
-  </div>
-  <div>
-    <input type="number" name="longitude" formControlName="longitude"> Longitude
-  </div>
-  <div>
-    <input type="number" name="latitude" formControlName="latitude"> Latitude
-  </div>
-  <div>
-    <input type="text" name="facebook" formControlName="facebook"> Facebook
-  </div>
-  <div>
-    <input type="text" name="soundcloud" formControlName="soundcloud"> Soundcloud
-  </div>
-  <div>
-    <input type="text" name="instagram" formControlName="instagram"> Instagram
-  </div>
-  <div>
-    <input type="text" name="www" formControlName="www"> WWW
-  </div>
-  <div>
-    <input type="submit" value="Send" [disabled]="!storeLog.valid"> 
-  </div>
-</form>
+</main>
