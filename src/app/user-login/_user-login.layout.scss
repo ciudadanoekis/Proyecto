@@ -1,0 +1,49 @@
+main {
+    .login {
+        font-family: $fontlight;
+        padding: 33px;
+
+        .form-inline {
+            .form-group {
+                width: 100%;
+    
+                label {
+                    width: 100%;
+                    margin: 0 0 .2rem;
+                    display: inline-block;
+                }
+    
+                input {
+                    width: 100%;
+                    margin: 0 0 .6rem;
+                    border: 2px solid $light;
+                    border-radius: 0;
+                    background-color: transparent;
+                    color: $light;
+    
+                    &.form-control {
+                        height: 2rem;
+                        padding: 3px 7px;
+    
+                        &:focus {
+                            box-shadow: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        a {
+            &.btn {
+                padding: 0;
+                display: block;
+                font-family: $fontregular;
+                text-decoration: underline;
+
+                &:hover {
+                    color: $accent;
+                }
+            }
+        }
+    }
+}
