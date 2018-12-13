@@ -28,9 +28,9 @@
             ],
             "styles": [
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "./node_modules/semantic-ui/dist/semantic.min.css",
-              "src/styles.scss",
-              "./node_modules/datatables.net-dt/css/jquery.dataTables.css"
+             "./node_modules/semantic-ui/dist/semantic.min.css",
+             "src/styles.scss",
+             "node_modules/datatables.net-dt/css/jquery.dataTables.css"
             ],
             "scripts": [
               "./node_modules/jquery/dist/jquery.min.js",
@@ -38,7 +38,7 @@
               "./node_modules/semantic-ui/dist/semantic.min.js",
               "src/jquery-3.3.1-min.js",
               "src/menu.js",
-              "./node_modules/datatables.net/js/jquery.dataTables.min.js"             
+              "./node_modules/datatables.net/js/jquery.dataTables.js"             
             ]
           },
           "configurations": {

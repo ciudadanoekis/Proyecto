@@ -75,11 +75,11 @@ main {
         }
 
         tbody {
-            position: relative;
+            // position: relative;
 
             tr {
                 width: 100%;
-                display: inline-block;
+                // display: inline-block;
                 transition-duration: .2s;
 
                 &:hover {
@@ -90,7 +90,7 @@ main {
 
             td {
                 vertical-align: top;
-                display: inline-block;
+                // display: inline-block;
                 padding: .2rem 0;
                 border-color: transparent;
 
@@ -105,4 +105,9 @@ main {
             }
         }
     }
+}
+
+table.dataTable, table.dataTable th, table.dataTable td {
+    box-sizing: content-box;
+    background: black;
 }
