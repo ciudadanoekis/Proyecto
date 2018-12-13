@@ -13,7 +13,8 @@ main {
                 display: inline-block;
             }
 
-            input {
+            input,
+            select {
                 width: 100%;
                 height: 2rem;
                 margin: 0 0 .6rem;
