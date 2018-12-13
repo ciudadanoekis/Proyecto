@@ -24,39 +24,22 @@ export class StoreloginComponent implements OnInit {
       continent : new FormControl('',
       [Validators.required]),
 
-      description : new FormControl('',
-      [Validators.required]),
+      description : new FormControl(''),
 
       address : new FormControl('',
       [Validators.required]),
 
-      phonenumber : new FormControl('',
-      [Validators.required]),
+      phonenumber : new FormControl(''),
 
-      email : new FormControl('',
-      [Validators.required,
-        Validators.email]),
-      
-      rating : new FormControl('',
-      [Validators.required]),
+      email : new FormControl(''),
 
-     longitude : new FormControl('',
-     [Validators.required]),
+      facebook : new FormControl(''),
 
-     latitude : new FormControl('',
-     [Validators.required]),
+      soundcloud : new FormControl(''),
 
-     facebook : new FormControl('',
-     [Validators.required]),
+      instagram : new FormControl(''),
 
-     soundcloud : new FormControl('',
-     [Validators.required]),
-
-     instagram : new FormControl('',
-     [Validators.required]),
-
-     www : new FormControl('',
-     [Validators.required]),
+      www : new FormControl(''),
     })
   }
 

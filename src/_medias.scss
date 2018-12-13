@@ -11,7 +11,7 @@
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     html {
         font-size: 14px;
     }
@@ -50,5 +50,9 @@
                 }
             }
         }
+    }
+
+    .mid {
+        width: 100%;
     }
 }

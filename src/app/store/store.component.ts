@@ -3,6 +3,7 @@ import { AuthorizeUserService } from '../authorizeUser.service';
 import { ApiService } from '../api.service';
 import { ActivatedRoute } from '@angular/router';
 import { IAppState } from './../store';
+import * as $ from 'jquery';
 
 @Component({
      selector: 'app-store',
@@ -28,7 +29,7 @@ export class StoreComponent implements OnInit {
      }
 
      ngOnInit() {
-          
+          $('#hamburger-button').addClass('hoverdark');
      }
 
      

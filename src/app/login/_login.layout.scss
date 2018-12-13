@@ -1,0 +1,51 @@
+main {
+    .login {
+        font-family: $fontlight;
+        padding: 28px 33px 33px;
+
+        .form-group {
+            width: 100%;
+            margin: 0;
+
+            label {
+                width: 100%;
+                margin: 0 0 .2rem;
+                display: inline-block;
+            }
+
+            input,
+            select {
+                width: 100%;
+                height: 2rem;
+                margin: 0 0 .6rem;
+                padding: 3px 7px;
+                border: 2px solid $light;
+                border-radius: 0;
+                background-color: transparent;
+                color: $light;
+            }
+        }
+
+        .submit-button {
+            color: $light;
+            opacity: 0.6;
+            background-color: transparent;
+            border: 0;
+            padding: 0;
+            text-decoration: underline;
+            cursor: not-allowed;
+            transition-duration: .2s;
+        }
+
+        .ng-valid {
+            .submit-button {
+                opacity: 1;
+                cursor: pointer;
+
+                &:hover {
+                    color: $accent;
+                }
+            }
+        }
+    }
+}
