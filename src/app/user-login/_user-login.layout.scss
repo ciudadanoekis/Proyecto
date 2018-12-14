@@ -45,5 +45,21 @@ main {
                 }
             }
         }
+
+        .well {
+            p {
+                margin: 0 0 1rem 0;
+            }
+
+            a {
+                font-family: $fontregular;
+                text-decoration: underline;
+                transition-duration: .2s;
+
+                &:hover {
+                    color: $accent;
+                }
+            }
+        }
     }
 }
