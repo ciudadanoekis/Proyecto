@@ -105,12 +105,13 @@
           <agm-map [latitude]="lat" [longitude]="lng" [zoom]="16">
                <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
           </agm-map>
-           <!-- la sentencia d abajo corresponde a la seccion de comentarios, que se activan al estar loggeado -->
-     <app-comments *ngIf="authService.isLoggedIn()" (desdeComentarios)="recibeComments($event)"></app-comments>
-          <div>
-               <p *ngFor="let c of comments">Usuario {{c.username}}: {{c.comment}}</p>
-          </div>
+          <app-comments *ngIf="authService.isLoggedIn()"></app-comments>
      </div>
-    
+     <agm-map [latitude]="lat" [longitude]="lng" [zoom]="16">
+          <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+     </agm-map>
+     
+     <!-- la sentencia d abajo corresponde a la seccion de comentarios, que se activan al estar loggeado -->
+     <app-comments *ngIf="authService.isLoggedIn()"></app-comments>
 
 </main>

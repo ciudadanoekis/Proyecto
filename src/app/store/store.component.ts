@@ -3,6 +3,7 @@ import { AuthorizeUserService } from '../authorizeUser.service';
 import { ApiService } from '../api.service';
 import { ActivatedRoute } from '@angular/router';
 import { IAppState } from './../store';
+import * as $ from 'jquery';
 
 @Component({
      selector: 'app-store',
@@ -36,6 +37,7 @@ export class StoreComponent implements OnInit {
 
           })
 
+<<<<<<< HEAD
           // this.api.getAllComments().then((res)=>{
           //      this.comments = res.json();
           //      console.log(this.comments)
@@ -51,6 +53,10 @@ export class StoreComponent implements OnInit {
      recibeComments(comentario){
          
           console.log(comentario); 
+=======
+     ngOnInit() {
+          $('#hamburger-button').addClass('hoverdark');
+>>>>>>> 84ca57852cf8a2ccb784cdb5c9d042a744489797
      }
      
 

@@ -1,27 +1,35 @@
-<!-- <app-header></app-header> -->
-<form  [formGroup]="userLogForm" (ngSubmit)="onFormularioUsuario()">
-   
-    <div>
-       <input type="text" name="username" formControlName="username"> User Name
-    </div>
-    <div>
-      <input type="text" name="name" formControlName="name"> Name
+<app-header></app-header>
+<main>
+   <div class="mid login">
+      <form  [formGroup]="userLogForm" (ngSubmit)="onFormularioUsuario()">
+         <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" name="username" formControlName="username">
+         </div>
+         <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" name="name" formControlName="name">
+         </div>
+         <div class="form-group">
+            <label for="surname">Surname</label>
+            <input type="text" name="surname" formControlName="surname">
+         </div>
+         <div class="form-group">
+            <label for="mail">Email</label>
+            <input type="email" name="mail" formControlName="mail">
+         </div>
+         <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" name="password" formControlName="password">
+         </div>
+         <div class="form-group">
+            <label for="residency">Residency</label>
+            <input type="text" name="city" formControlName="city">
+         </div>
+         <!-- <div>
+            <input type="date" name="dateOfBirth" formControlName="dateOfBirth"> Date Of Birth
+         </div> -->    
+         <input type="submit" value="Register" [disabled]="!userLogForm.valid" class="submit-button">
+      </form>
    </div>
-   <div>
-      <input type="text" name="surname" formControlName="surname"> Surname
-   </div>
-   <div>
-      <input type="email" name="mail" formControlName="mail"> Email
-   </div>
-    <div>
-       <input type="password" name="password" formControlName="password"> Password
-    </div>
-    <div>
-       <input type="text" name="city" formControlName="city"> Residency
-    </div>
-    <!-- <div>
-       <input type="date" name="dateOfBirth" formControlName="dateOfBirth"> Date Of Birth
-    </div> -->    
-    <input type="submit" value="Send" [disabled]="!userLogForm.valid">
-
-</form>
+</main>

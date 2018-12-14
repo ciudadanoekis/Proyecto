@@ -3,8 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AUTH_PROVIDERS } from './authorizeUser.service';
 import { LoggedIn2Guard } from './logged-in2.guard';
-
-
+import { DataTablesModule } from 'angular-datatables';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -51,9 +50,8 @@ import { HeaderComponent } from './header/header.component';
           AgmCoreModule.forRoot({
                apiKey: 'AIzaSyBil8XETYEYAWvv9WsT4potsdyZRQnpUt0'
           }),
-
-          HttpModule
-
+          HttpModule,
+          DataTablesModule
      ],
      providers: [
           AUTH_PROVIDERS,
