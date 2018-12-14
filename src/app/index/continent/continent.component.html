@@ -14,13 +14,8 @@
                     <input type="text" placeholder="Search">
                </ul>
           </nav>
-<<<<<<< HEAD
-     </div>x
-     <table>
-=======
      </div>
-     <!-- <table>
->>>>>>> 84ca57852cf8a2ccb784cdb5c9d042a744489797
+     <table>
           <thead>
                <tr>
                     <th>Country</th>
@@ -28,36 +23,12 @@
                     <th>Store</th>
                </tr>
           </thead>
-     </table> -->
+     </table>
 </header>
 <main>
-<<<<<<< HEAD
-  <div id="europe" class="continent">
-    <div class="store-list">
-      <table>
-        <tbody>
-          <tr *ngFor="let r of resultado" [routerLink]="['/store', r.slug]">
-          <tr *ngFor="let r of resultado" [routerLink]="['/store', r.slug] ">
-            <td>{{r.country}}</td>
-            <td>{{r.city}}</td>
-            <td>{{r.name}}</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</main>
-=======
      <div id="europe" class="continent">
           <div class="store-list">
-               <table datatable [dtTrigger]="dtTrigger" class="row-border hover">
-                    <thead>
-                         <tr>
-                         <th>Country</th>
-                         <th>City</th>
-                         <th>Name</th>
-                         </tr>
-                    </thead>
+               <table>
                     <tbody>
                          <tr *ngFor="let r of resultado" [routerLink]="['/store', r.slug]">
                               <td>{{r.country}}</td>
@@ -69,4 +40,3 @@
           </div>
      </div>
 </main>
->>>>>>> 84ca57852cf8a2ccb784cdb5c9d042a744489797

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output } from '@angular/core';
+import { Component, OnInit, Input, Output, ViewChild } from '@angular/core';
 import { ListadoService } from 'src/app/listado.service';
 import { ActivatedRoute } from '@angular/router';
 import { ApiService } from "../../api.service";
@@ -19,10 +19,12 @@ export class ContinentComponent implements OnInit {
   continentName: string;
   recordId:number;
 
+  @ViewChild('dtElement') dtElement;
+
   storeId:number;
   idTienda:string;
   
-  dtTrigger = new Subject();
+  // dtTrigger = new Subject();
 
   constructor(private datos: ListadoService, private activatedRoute: ActivatedRoute, private api:ApiService) {
 
@@ -33,21 +35,39 @@ export class ContinentComponent implements OnInit {
 //       // console.log(this.resultado)
 //     })
 
+    
+  }
+  
+  ngOnInit() {
+    console.log('ENTRA')
+
     this.activatedRoute.params.subscribe((params) => {
       this.continentName = params.continent;
       this.idTienda = params.id;
+      console.log('ENTRA CONSTRUCTOR')
+
+      
+
+      this.api.getStores(this.continentName).then((res) => {
+          this.resultado = res.json();
+          console.log('RESULTADO', this.resultado)
+          // this.dtTrigger.next();
+        })
       // console.log(this.idTienda)
 
       
     })
+    // this.api.getStores(this.continentName).then((res) => {
+    //   this.resultado = res.json();
+    //   console.log('RESULTADO', this.resultado)
+    //   this.dtTrigger.next();
+    // })
   }
-  
-  ngOnInit() {
-    this.api.getStores(this.continentName).then((res) => {
-      this.resultado = res.json();
-      this.dtTrigger.next();
-    })
-  }
+
+  // ngOnDestroy(){
+  //   console.log('NGONDESTROY')
+  //   this.dtTrigger.unsubscribe()
+  // }
 
   storeSelection(store){
     this.idTienda=store;
