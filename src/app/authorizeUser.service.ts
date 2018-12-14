@@ -8,11 +8,12 @@ import { ApiService }  from './api.service';
 
 export class AuthorizeUserService{
     zeroUser: any[];
+   
 
     constructor(private fakeUser:UserDataList, private api: ApiService){
         
         this.api.getUsers().then((res)=>{
-            console.log(res.json()); 
+            // console.log(res.json()); 
             this.zeroUser = res.json();
         })
         
@@ -22,19 +23,21 @@ export class AuthorizeUserService{
     }
     
     login(username:string, password:string){
-        console.log(this.zeroUser)
+        // console.log(this.zeroUser)
 
         let elem = this.zeroUser.find((item) =>{
             return (item.username === username) && (item.password === password)
         })
 
-        console.log(elem)
+        // console.log(elem)
 
         if(elem === undefined){
             return false
         }else{
-            localStorage.setItem('username', elem.userName)
+            localStorage.setItem('username', elem.username);
+            localStorage.setItem('userId', (elem.id));
             return true
+           
         }
     }
 

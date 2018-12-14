@@ -18,6 +18,7 @@ export class ApiService{
     }
 
     insertStore(newStore){
+        console.log(newStore);
         return this.http.post(`${this.baseUrl}/store`,newStore).toPromise();
     }
 
@@ -33,4 +34,15 @@ export class ApiService{
     getUsers(){
         return this.http.get(`${this.baseUrl}/user`).toPromise();
     }
+    insertComment(newComment){
+        console.log(newComment);
+        return this.http.post(`${this.baseUrl}/comments`, newComment).toPromise();
+    }
+    getAllComments(){
+        return this.http.get(`${this.baseUrl}/comments`).toPromise();
+    }
+    getCommentsByStore(slug){
+        return this.http.get(`${this.baseUrl}/comments/${slug}`).toPromise();
+    }
+
 }

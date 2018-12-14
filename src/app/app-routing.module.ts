@@ -22,6 +22,7 @@ const routes: Routes = [
   { path: 'index', component: IndexComponent },
   { path: 'about', component: AboutComponent },
   { path: 'store/:slug', component: StoreComponent },
+  { path: 'store/comment', component: CommentsComponent },
   { path: 'user-login', component: LoginComponent},
   { path: 'store-login', component: StoreloginComponent },
   { path: 'register', component: LoginComponent},

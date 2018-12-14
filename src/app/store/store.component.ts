@@ -12,24 +12,49 @@ import * as $ from 'jquery';
 })
 export class StoreComponent implements OnInit {
      storeSlug:string;
-     store:{};
+     store:any;
+     idTienda:number;
+     comentario:string;
+     comments:any;
      lat: number = 39.4618;
      lng: number = -0.36814;
 
      constructor(public authService: AuthorizeUserService, private api: ApiService, private activatedRoute: ActivatedRoute)  {
           
           this.activatedRoute.params.subscribe((params) => {
-               console.log(params.slug)
-
+              
+               
                this.api.getStoreBySlug(params.slug).then((res)=>{                    
                    this.store = res.json();
+                   
+                   localStorage.setItem('storeId', this.store.id)
+               }) 
+
+               this.api.getCommentsByStore(params.slug).then((res)=>{
+                    this.comments = res.json();
+                    console.log(this.comments);
                })
-               
+
           })
+
+          // this.api.getAllComments().then((res)=>{
+          //      this.comments = res.json();
+          //      console.log(this.comments)
+          // })
+
+          
+
+          
      }
 
      ngOnInit() {
           $('#hamburger-button').addClass('hoverdark');
+     }
+
+     recibeComments(comentario){
+         
+          console.log(comentario); 
+     
      }
 
      
