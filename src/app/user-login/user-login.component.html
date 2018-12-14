@@ -16,6 +16,7 @@
     </form>
     <div class="well" *ngIf="authorize.getUser()">
       Logged in as <b>{{ authorize.getUser() }}</b>
+      
       <a href (click)="logout()">Log out</a>
     </div>
     <div class="alertalert-danger" role="alert" *ngIf="message">
