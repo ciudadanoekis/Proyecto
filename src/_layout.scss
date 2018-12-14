@@ -131,6 +131,10 @@ a {
     }
 }
 
+img {
+    width: 100%;
+}
+
 .row {
     clear: both;
     content: "";
@@ -144,10 +148,22 @@ a {
 
 .full {
     width: 100%;
+    display: inline-block;
+    vertical-align: top;
 }
 
 .mid {
     width: 50%;
+    display: inline-block;
+    vertical-align: top;
+
+    &.left {
+        padding: 0 16.5px 0 33px;
+    }
+
+    &.right {
+        padding: 0 33px 0 16.5px;
+    }
 }
 
 .hoverdark {  

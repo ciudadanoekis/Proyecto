@@ -1,6 +1,6 @@
 <app-header></app-header>
 <main>
-  <div class="mid login">
+  <div class="mid left login">
     <form class="form-inline" *ngIf="!authorize.getUser()">
       <div class="form-group">
         <label for="username">User</label>
@@ -10,16 +10,17 @@
         <label for="password">Password</label>
         <input class="form-control" type="password" name="password" #password>
       </div>
-      <a class="btn btn-default" (click)="login(username.value, password.value)">
-        Login
-      </a>
+      <a class="btn btn-default" (click)="login(username.value, password.value)">Login</a>
     </form>
     <div class="well" *ngIf="authorize.getUser()">
-      Logged in as <b>{{ authorize.getUser() }}</b>
+      <p>Logged in as {{ authorize.getUser() }}</p>
       <a href (click)="logout()">Log out</a>
     </div>
     <div class="alertalert-danger" role="alert" *ngIf="message">
       {{ message }}
     </div>
+  </div>
+  <div class="mid right">
+    <img src="../../assets/images/digging.jpeg" alt="Digging">
   </div>
 </main>

@@ -19,11 +19,11 @@
                <h3>{{store?.city}}, {{store?.country}}</h3>
           </div>
           <div class="store-main full">
-               <div class="store-info mid">
+               <div class="store-info mid left">
                     <div class="logo">
                          <img src="../../assets/images/kh-vinyl-store.jpg" alt="La Discoteca: K&H Vinyl Store">
                     </div>
-                    <div class="store-rating mid">
+                    <div class="store-rating">
                          <h4>Rating</h4>
                          <div class="ui rating" data-max-rating="5"></div>
                          <p>{{store?.rating}}</p>
@@ -89,44 +89,35 @@
                          </div>
                     </div>
                </div>
-               <div class="store-img mid">
+               <div class="store-img mid right">
                     <img src="../../assets/images/hardwax.jpg" alt="Hardwax">
                </div>
           </div>
           <div class="row-2">
-               <div class="store-main">
-                    <div class="store-info">
-                         <h4>Adress</h4>
-                         <p>{{store?.address}}</p>
-                    </div>
-               
+               <div class="store-info mid left">
+                    <h4>Adress</h4>
+                    <p>{{store?.address}}</p>
                </div>
           </div>
           <agm-map [latitude]="lat" [longitude]="lng" [zoom]="16" [scrollwheel]="false">
                <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
           </agm-map>
+          <app-comments *ngIf="authService.isLoggedIn()"></app-comments>
+          <div>
+               <table>
+                    <thead>
+                         <tr>
+                              <th>Usuario</th>
+                              <th>Comentario</th>
+                         </tr>
+                    </thead>
+                    <tbody>
+                         <tr *ngFor="let c of comments">
+                              <td>{{c.username}}</td>
+                              <td>{{c.comment}}</td>
+                         </tr>
+                    </tbody>
+               </table>
+          </div>
      </div>
-     <!-- la sentencia d abajo corresponde a la seccion de comentarios, que se activan al estar loggeado -->
-     <app-comments *ngIf="authService.isLoggedIn()"></app-comments>
-     
-     
-     <!-- la sentencia d abajo corresponde a la seccion de comentarios, que se activan al estar loggeado -->
-     <app-comments *ngIf="authService.isLoggedIn()"></app-comments>
-     <div>
-          <table>
-               <thead>
-                    <tr>
-                         <th>Usuario</th>
-                         <th>Comentario</th>
-                    </tr>
-               </thead>
-               <tbody>
-                    <tr *ngFor="let c of comments">
-                         <td>{{c.username}}</td>
-                         <td>{{c.comment}}</td>
-                    </tr>
-               </tbody>
-          </table>
-     </div>
-
 </main>

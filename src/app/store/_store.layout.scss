@@ -5,11 +5,6 @@ div[class^='col']{
 header {
     padding: 33px;
     background-color: $accentlight;
-    /* -webkit-box-shadow: 0 10px 13px 7px $accentlight;
-       -moz-box-shadow: 0 10px 13px 7px $accentlight;
-        -ms-box-shadow: 0 10px 13px 7px $accentlight;
-         -o-box-shadow: 0 10px 13px 7px $accentlight;
-            box-shadow: 0 10px 13px 7px $accentlight; */
 
     .logo {
         h1 {
@@ -54,8 +49,6 @@ header {
 }
 
 .store-main {
-    padding: 0 33px 33px;
-
     .store-info {
         .logo {
             width: 8.2rem;
@@ -84,8 +77,6 @@ header {
     }
 
     .store-img {
-        padding: 0 30px 30px 15px;
-
         img {
             width: 100%;
             height: auto;
