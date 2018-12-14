@@ -88,9 +88,9 @@
                               </div>
                          </div>
                     </div>
-                    <div class="store-img mid">
-                         <img src="" alt="">
-                    </div>
+               </div>
+               <div class="store-img mid">
+                    <img src="../../assets/images/hardwax.jpg" alt="Hardwax">
                </div>
           </div>
           <div class="row-2">
@@ -102,16 +102,11 @@
                
                </div>
           </div>
-          <agm-map [latitude]="lat" [longitude]="lng" [zoom]="16">
+          <agm-map [latitude]="lat" [longitude]="lng" [zoom]="16" [scrollwheel]="false">
                <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
           </agm-map>
           <app-comments *ngIf="authService.isLoggedIn()"></app-comments>
      </div>
-     <agm-map [latitude]="lat" [longitude]="lng" [zoom]="16">
-          <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
-     </agm-map>
-     
      <!-- la sentencia d abajo corresponde a la seccion de comentarios, que se activan al estar loggeado -->
      <app-comments *ngIf="authService.isLoggedIn()"></app-comments>
-
 </main>
