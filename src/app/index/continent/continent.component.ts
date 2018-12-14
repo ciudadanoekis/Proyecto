@@ -16,6 +16,7 @@ export class ContinentComponent implements OnInit {
   datosLista: [];
   resultado: {} ;
   continentName: string;
+  recordId:number;
 
   storeId:number;
   idTienda:string;
@@ -31,8 +32,9 @@ export class ContinentComponent implements OnInit {
 //     })
 
     this.activatedRoute.params.subscribe((params) => {
-      this.continentName = params.continent
-      // console.log(this.continentName)
+      this.continentName = params.continent;
+      this.idTienda = params.id;
+      // console.log(this.idTienda)
 
       this.api.getStores(this.continentName).then((res)=>{
         this.resultado= res.json();

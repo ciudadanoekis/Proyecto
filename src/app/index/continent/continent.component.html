@@ -14,7 +14,7 @@
                     <input type="text" placeholder="Search">
                </ul>
           </nav>
-     </div>
+     </div>x
      <table>
           <thead>
                <tr>
@@ -30,7 +30,7 @@
     <div class="store-list">
       <table>
         <tbody>
-          <tr *ngFor="let r of resultado" [routerLink]="['/store', r.slug]">
+          <tr *ngFor="let r of resultado" [routerLink]="['/store', r.slug] ">
             <td>{{r.country}}</td>
             <td>{{r.city}}</td>
             <td>{{r.name}}</td>
