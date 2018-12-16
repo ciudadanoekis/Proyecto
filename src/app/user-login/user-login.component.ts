@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule, FormGroup, FormControl, Validators} from '@angular/forms'
 import { AuthorizeUserService } from '../authorizeUser.service';
+import * as $ from 'jquery';
+
 @Component({
   selector: 'app-user-login',
   templateUrl: './user-login.component.html',
@@ -28,6 +30,7 @@ export class UserLoginComponent implements OnInit {
 
 
   ngOnInit() {
+    $('#hamburger-button').removeClass('hoverdark');
   }
 
 }

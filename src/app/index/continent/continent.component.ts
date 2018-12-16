@@ -6,6 +6,7 @@ import { Subject } from 'rxjs';
 import {  DataService } from '../../storeIdData.service';
 import { MENSAJE } from '../../actions';
 import { IAppState } from '../../store';
+import * as $ from 'jquery';
  @Component({
   selector: 'app-continent',
   templateUrl: './continent.component.html',
@@ -62,6 +63,8 @@ export class ContinentComponent implements OnInit {
     //   console.log('RESULTADO', this.resultado)
     //   this.dtTrigger.next();
     // })
+
+    $('#hamburger-button').removeClass('hoverdark');
   }
 
   // ngOnDestroy(){

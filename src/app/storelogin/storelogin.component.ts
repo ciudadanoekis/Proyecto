@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule, FormGroup, FormControl, Validators } from '@angular/forms';
 import { ApiService } from '../api.service';
+import * as $ from 'jquery';
+
 @Component({
   selector: 'app-storelogin',
   templateUrl: './storelogin.component.html',
@@ -11,6 +13,8 @@ export class StoreloginComponent implements OnInit {
   constructor(private api:ApiService) { }
 
   ngOnInit() {
+    $('#hamburger-button').removeClass('hoverdark');
+    
     this.storeLog = new FormGroup({
       name : new FormControl('',
       [Validators.required]),
