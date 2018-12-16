@@ -1,9 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-<<<<<<< HEAD
-import { Howl, Howler } from 'howler';
-=======
 // import { Howl, Howler } from 'howler';
->>>>>>> e4b2f9f0f04167a05cf5a07144055bd740b8597c
 import { ApiService } from '../api.service';
 import * as $ from 'jquery';
 
@@ -27,11 +23,8 @@ export class IndexComponent implements OnInit {
 
     
     
-<<<<<<< HEAD
-    this.sound.volume=0.0;
-=======
     this.sound.volume=0.5;
->>>>>>> e4b2f9f0f04167a05cf5a07144055bd740b8597c
+    
     $('#hamburger-button').removeClass('hoverdark');
   }
 
