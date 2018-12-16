@@ -1,10 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-<<<<<<< HEAD
-import { Howl, Howler } from 'howler';
+// import { Howl, Howler } from 'howler';
 import { ApiService } from '../api.service';
-=======
 import * as $ from 'jquery';
->>>>>>> 2f10519bf903895b70b5bb29f7c78a5b96a21d52
 
 @Component({
   selector: 'app-index', 
@@ -18,7 +15,6 @@ export class IndexComponent implements OnInit {
   constructor(private api:ApiService) { }
 
   ngOnInit() {
-<<<<<<< HEAD
     this.api.getSound().then((res)=>{
       this.track=res.json();
       this.song = this.track[0].track;
@@ -27,10 +23,8 @@ export class IndexComponent implements OnInit {
     })
     this.sound.play();
     
-    this.sound.volume=0.0;
-=======
+    this.sound.volume=0.5;
     $('#hamburger-button').removeClass('hoverdark');
->>>>>>> 2f10519bf903895b70b5bb29f7c78a5b96a21d52
   }
 
 }
