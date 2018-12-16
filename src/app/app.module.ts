@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AUTH_PROVIDERS } from './authorizeUser.service';
 import { LoggedIn2Guard } from './logged-in2.guard';
 import { DataTablesModule } from 'angular-datatables';
+import { Howl, Howler } from 'howler';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -40,7 +41,8 @@ import { HeaderComponent } from './header/header.component';
           UserLoginComponent,
           ErrorComponent,
           CommentsComponent,
-          HeaderComponent
+          HeaderComponent, 
+          
      ],
      imports: [
           BrowserModule,
@@ -51,7 +53,10 @@ import { HeaderComponent } from './header/header.component';
                apiKey: 'AIzaSyBil8XETYEYAWvv9WsT4potsdyZRQnpUt0'
           }),
           HttpModule,
-          DataTablesModule
+          DataTablesModule, 
+          
+          
+
      ],
      providers: [
           AUTH_PROVIDERS,

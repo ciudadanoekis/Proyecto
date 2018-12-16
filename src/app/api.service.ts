@@ -44,5 +44,7 @@ export class ApiService{
     getCommentsByStore(slug){
         return this.http.get(`${this.baseUrl}/comments/${slug}`).toPromise();
     }
-
+    getSound(){
+        return this.http.get(`${this.baseUrl}/sound`).toPromise();
+    }
 }

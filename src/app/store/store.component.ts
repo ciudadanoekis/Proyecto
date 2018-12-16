@@ -35,16 +35,7 @@ export class StoreComponent implements OnInit {
                     console.log(this.comments);
                })
 
-          })
-
-          // this.api.getAllComments().then((res)=>{
-          //      this.comments = res.json();
-          //      console.log(this.comments)
-          // })
-
-          
-
-          
+          })          
      }
 
      ngOnInit() {

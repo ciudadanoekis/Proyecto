@@ -13,12 +13,7 @@
       <a class="btn btn-default" (click)="login(username.value, password.value)">Login</a>
     </form>
     <div class="well" *ngIf="authorize.getUser()">
-<<<<<<< HEAD
-      Logged in as <b>{{ authorize.getUser() }}</b>
-      
-=======
       <p>Logged in as {{ authorize.getUser() }}</p>
->>>>>>> 4cd1917bde8cad501c90a2226491ffc7e275a628
       <a href (click)="logout()">Log out</a>
     </div>
     <div class="alertalert-danger" role="alert" *ngIf="message">

@@ -37,12 +37,12 @@ export class CommentsComponent implements OnInit {
 
     this.api.insertComment(this.comentario).then(res =>{
 
-      this.comentado = res.json().comment;
-          console.log(this.comentado)
-      this.desdeComentarios.emit(this.comentado);
-      
-
+      // this.comentado = res.json().comment;
+      //     console.log(res.json())
+      // this.desdeComentarios.emit(this.comentado);
+  
     })
+      this.desdeComentarios.emit(parrafada);
   }
 
 }

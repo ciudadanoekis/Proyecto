@@ -39,18 +39,18 @@ export class ContinentComponent implements OnInit {
   }
   
   ngOnInit() {
-    console.log('ENTRA')
+    // console.log('ENTRA')
 
     this.activatedRoute.params.subscribe((params) => {
       this.continentName = params.continent;
       this.idTienda = params.id;
-      console.log('ENTRA CONSTRUCTOR')
+      // console.log('ENTRA CONSTRUCTOR')
 
       
 
       this.api.getStores(this.continentName).then((res) => {
           this.resultado = res.json();
-          console.log('RESULTADO', this.resultado)
+          // console.log('RESULTADO', this.resultado)
           // this.dtTrigger.next();
         })
       // console.log(this.idTienda)
