@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-index',
@@ -10,6 +11,7 @@ export class IndexComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    $('#hamburger-button').removeClass('hoverdark');
   }
 
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserDataList} from '../user.service';
 import { Http } from  '@angular/http';
 import { ApiService } from '../api.service';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-profile',
@@ -16,10 +17,7 @@ export class ProfileComponent implements OnInit {
   }
 
   ngOnInit() {
-    // this.api.getUsers().then((resultado)=>{
-    //   this.userData=resultado.json();
-      // console.log(this.userData)
-    // })
+    $('#hamburger-button').removeClass('hoverdark');
   }
 
 }
