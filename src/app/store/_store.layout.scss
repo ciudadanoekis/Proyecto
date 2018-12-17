@@ -28,8 +28,17 @@ header {
 }
 
 .row-1,
-.row-2 {
+.row-2,
+.row-3,
+.row-4 {
     background-color: $accentlight;
+    padding-bottom: 1rem;
+}
+
+.row-2 {
+    p {
+        margin: 0 0 1rem;
+    }
 }
 
 .store-title {
@@ -38,7 +47,6 @@ header {
 
     h2 {
         font-size: 2.7rem;
-        transition-duration: .2s;
     
         &:hover {
             color: $light;
@@ -88,7 +96,6 @@ header {
 
         .map {
             width: 100%;
-            height: 400px;
         }
     }
 
@@ -110,6 +117,52 @@ header {
         p {
             font-family: $fontlight;
             line-height: 1.2rem;
+        }
+    }
+
+    .store-info {
+        table {
+            &.comments {
+                width: 100%;
+                margin: 20px 0 0 0;
+                background-color: transparent;
+        
+                thead {
+                    width: 100%;    
+        
+                    font: {
+                        family: $fontregular, 'Helvetica', 'Arial';
+                        weight: 400;
+                        style: sans-serif;
+                    }
+        
+                    tr {
+                        width: 100%;
+                        display: inline-block;
+                        border-color: transparent;
+                    }
+        
+                    th {
+                        vertical-align: top;
+                        display: inline-block;
+                        padding: .3rem 0;
+                        border: {
+                            color: $light;
+                            bottom: 2px solid $light;
+                            top: 0 transparent;
+                        }
+        
+                        &:nth-child(1) {
+                            width: 23%;
+                            margin-right: 2%;
+                        }
+        
+                        &:nth-child(2) {
+                            width: 75%;
+                        }
+                    }
+                }
+            }
         }
     }
 }

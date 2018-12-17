@@ -1,12 +1,26 @@
+@media (max-width: 1280px) {
+    .logo {
+        margin-bottom: .5rem;
+    }
+}
+
 @media (max-width: 1024px) {
-    .continent-title {
-        h2 {
-            padding: 14px 0 0 14px;
+    header {
+        padding: 20px;
+
+        .menu {
+            input {
+                display: none;
+            }
+        }
+        .logo {
+            margin-bottom: 0;
         }
     }
 
     .store-list {
-        padding: 5.5rem 20px 0;
+        padding: 5.8rem 20px 0;
+
         .table,
         .table-dark {
             thead {
@@ -16,58 +30,71 @@
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     html {
         font-size: 14px;
     }
 
     header {
+        padding: 15px;
         background-color: $dark;
+
+        .logo {
+            padding: 0;
+            margin-bottom: .5rem;
+        }
+
         table {
             padding: 0 15px;
+
             thead {
                 padding: 20px 0 0 0;
+
                 th {
                     &:nth-child(1) {
                         display: none;
                     }
+
                     &:nth-child(2) {
                         width: 30%;
                         margin-right: 5%;
                     }
+                    
                     &:nth-child(3) {
                         width: 65%;
                     }
                 }
             }
-        }
-    }
-
-    .continent-title {
-        h2 {
-            font-size: 4rem;
-            padding: 12px 0 0 12px;
         }
     }
 
     .store-list {
-        padding: 6rem 15px 0;
+        padding: 7.5rem 15px 0;
+
         table {
             tbody {
                 td {
-                    padding: 0.5rem 0;
+                    padding: .5rem 0;
                     &:nth-child(1) {
                         display: none;
                     }
+
                     &:nth-child(2) {
                         width: 30%;
                         margin-right: 5%;
                     }
+
                     &:nth-child(3) {
                         width: 65%;
                     }
                 }
             }
         }
+    }
+}
+
+@media (max-width: 450px) {
+    .store-list {
+        padding: 8.5rem 15px 0;
     }
 }
