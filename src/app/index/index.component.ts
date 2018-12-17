@@ -11,7 +11,7 @@ import * as $ from 'jquery';
 export class IndexComponent implements OnInit {
   track:{};
   song:string;
-  sound = new Audio("http://feeds.soundcloud.com/stream/285571923-ard2-b1-ard2_winter_clip.mp3")
+  sound = new Audio("https://soundcloud.com/electronique-it-records/donato-dozzy-e-p-200-roma")
   constructor(private api:ApiService) { }
 
   ngOnInit() {
