@@ -23,7 +23,7 @@ export class IndexComponent implements OnInit {
         this.sound= new Audio(this.song)
         
         this.sound.play();
-        this.sound.volume=0;
+        this.sound.volume=0.5;
         // 'http://feeds.soundcloud.com/stream/285571923-ard2-b1-ard2_winter_clip.mp3'
     })
    
