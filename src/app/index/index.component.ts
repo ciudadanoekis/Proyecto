@@ -15,13 +15,13 @@ export class IndexComponent implements OnInit {
   constructor(private api:ApiService) { }
 
   ngOnInit() {
-    /* this.api.getSound().then((res) => {
+    this.api.getSound().then((res) => {
       this.track = res.json();
       this.song = this.track[0].track;
       console.log(this.song)
     })
 
-    this.sound.volume = 0.5; */
+    this.sound.volume = 0.5;
     
     $('#hamburger-button').removeClass('hoverdark');
     $('#overlay').delay(3000).slideUp(600);
