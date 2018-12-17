@@ -23,7 +23,8 @@ export class StoreComponent implements OnInit {
           
           this.activatedRoute.params.subscribe((params) => {
               
-               
+               this.storeSlug = params.slug
+
                this.api.getStoreBySlug(params.slug).then((res)=>{                    
                    this.store = res.json();
                    
@@ -45,6 +46,10 @@ export class StoreComponent implements OnInit {
      recibeComments(comentario){
          
           console.log(comentario); 
+          this.api.getCommentsByStore(this.storeSlug).then((res)=>{
+               this.comments = res.json();
+               console.log(this.comments);
+          })
      
      }
 

@@ -40,9 +40,9 @@ export class CommentsComponent implements OnInit {
       // this.comentado = res.json().comment;
       //     console.log(res.json())
       // this.desdeComentarios.emit(this.comentado);
-  
-    })
       this.desdeComentarios.emit(parrafada);
+    })
+      
   }
 
 }
