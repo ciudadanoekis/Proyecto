@@ -1,0 +1,29 @@
+h4 {
+    line-height: 1.2rem;
+    margin:  0 0 .5rem;
+}
+
+textarea {
+    width: 100%;
+    font-family: $fontlight;
+    color: $light;
+    background-color: transparent;
+    border: 2px solid $light;
+    margin: 0 0 .5rem;
+    padding: 8px;
+}
+
+.submit-button {
+    font-family: $fontregular;
+    color: $light;
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    text-decoration: underline;
+    cursor: pointer;
+    transition-duration: .2s;
+
+    &:hover {
+        color: $dark;
+    }
+}

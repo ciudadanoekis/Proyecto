@@ -160,6 +160,10 @@ img {
     width: 100%;
     display: inline-block;
     vertical-align: top;
+
+    &.left {
+        padding: 0 33px;
+    }
 }
 
 .mid {

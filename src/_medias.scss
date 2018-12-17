@@ -4,9 +4,26 @@
     }
 
     header {
+        padding: 20px;
+        
         .navbar {
             width: 100vw;
             right: -100vw;
+        }
+    }
+
+    .full {
+        &.left {
+            padding: 0 20px;
+        }
+    }
+
+    .mid {
+        width: 100%;
+    
+        &.left,
+        &.right {
+            padding: 0 20px;
         }
     }
 }
@@ -17,11 +34,11 @@
     }
 
     header {
-        padding: 15px 15px 15px 30px;
+        padding: 15px;
 
         .logo {
             width: 100%;
-            padding: 0 30px 15px 0;
+            padding: 0 15px 15px 0;
         }
 
         .menu {
@@ -52,7 +69,16 @@
         }
     }
 
-    .mid {
-        width: 100%;
+    .full {
+        &.left {
+            padding: 0 15px;
+        }
+    }
+
+    .mid {    
+        &.left,
+        &.right {
+            padding: 0 15px;
+        }
     }
 }

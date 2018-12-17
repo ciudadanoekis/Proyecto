@@ -34,3 +34,25 @@ main {
         }
     }
 }
+
+#overlay {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding-top: 33px;
+    z-index: 999999999;
+    background-color: $accent;
+
+    h1 {
+        font-size: 6.6rem;
+        line-height: .85;
+
+        &:hover {
+            color: $light;
+            cursor: auto;
+        }
+    }
+}

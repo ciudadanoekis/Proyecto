@@ -11,6 +11,7 @@ import * as $ from 'jquery';
 export class IndexComponent implements OnInit {
   track:{};
   song:string;
+<<<<<<< HEAD
   sound: any;
 
 
@@ -34,6 +35,14 @@ export class IndexComponent implements OnInit {
     this.api.getSound().then((res)=>{
       this.track=res.json();
       console.log(this.track)
+=======
+  sound = new Audio("https://soundcloud.com/electronique-it-records/donato-dozzy-e-p-200-roma")
+  constructor(private api:ApiService) { }
+
+  ngOnInit() {
+    this.api.getSound().then((res) => {
+      this.track = res.json();
+>>>>>>> 6d2c73f82b89aa01af544d737a4cf329aa0e91c4
       this.song = this.track[0].track;
       console.log(this.song);
       
@@ -43,14 +52,20 @@ export class IndexComponent implements OnInit {
         this.sound.volume=0.5;
       
     })
+<<<<<<< HEAD
     
    
     
     
   
     
+=======
+
+    this.sound.volume = 0.5;
+>>>>>>> 6d2c73f82b89aa01af544d737a4cf329aa0e91c4
     
     $('#hamburger-button').removeClass('hoverdark');
+    $('#overlay').delay(3000).slideUp(600);
   }
 
 }

@@ -13,7 +13,7 @@
      </div> -->
 </header>
 <main id="store">
-     <div class="row-1">
+     <div id="info" class="row-1">
           <div class="store-title">
                <h2>{{store?.name}}</h2>
                <h3>{{store?.city}}, {{store?.country}}</h3>
@@ -34,7 +34,9 @@
                                    <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
                               </div>
                          </div>
-                         <p>{{store?.rating}}</p>
+                         <!-- <p>{{store?.rating}}</p> -->
+                         <p>4.7</p>
+                         <p>285 votes</p>
                     </div>
                     <h4>Description</h4>
                     <p id='info'>{{store?.description}}</p>
@@ -98,10 +100,41 @@
                     </div>
                </div>
                <div class="store-img mid right">
-                    <img src="../../assets/images/hardwax.jpg" alt="Hard Wax store">
+                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                         <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                   <img src="../../assets/images/hardwax.jpg">
+                              </div>
+                              <div class="carousel-item">
+                                   <img src="../../assets/images/hardwax2.jpg">
+                              </div>
+                              <div class="carousel-item">
+                                   <img src="../../assets/images/hardwax3.jpg">
+                              </div>
+                              <div class="carousel-item">
+                                   <img src="../../assets/images/hardwax4.jpg">
+                              </div>
+                              <div class="carousel-item">
+                                   <img src="../../assets/images/hardwax5.jpg">
+                              </div>
+                              <div class="carousel-item">
+                                   <img src="../../assets/images/hardwax6.jpg">
+                              </div>
+                         </div>
+                         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="sr-only">Previous</span>
+                         </a>
+                         <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="sr-only">Next</span>
+                         </a>
+                    </div>
                </div>
           </div>
-          <div class="row-2">
+     </div>
+     <div id="address" class="row-2">
+          <div class="store-main full">
                <div class="store-info mid left">
                     <h4 id="address">Address</h4>
                     <p>{{store?.address}}</p>
@@ -110,22 +143,26 @@
           <agm-map [latitude]="store?.latitude" [longitude]="store?.longitude" [zoom]="16" [scrollwheel]="false">
                <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
           </agm-map>
-          <app-comments *ngIf="authService.isLoggedIn()" (desdeComentarios)="recibeComments($event)"></app-comments>
-          <div id="comments">
-               <table>
-                    <thead>
-                         <tr>
-                              <th>Usuario</th>
-                              <th>Comentario</th>
-                         </tr>
-                    </thead>
-                    <tbody>
-                         <tr *ngFor="let c of comments">
-                              <td>{{c.username}}</td>
-                              <td>{{c.comment}}</td>
-                         </tr>
-                    </tbody>
-               </table>
+     </div>
+     <div id="comments" class="row-3">
+          <div class="store-main full">
+               <div class="store-info full left">
+                    <app-comments *ngIf="authService.isLoggedIn()" (desdeComentarios)="recibeComments($event)"></app-comments>
+                    <table class="comments">
+                         <thead>
+                              <tr>
+                                   <th>User</th>
+                                   <th>Comment</th>
+                              </tr>
+                         </thead>
+                         <tbody>
+                              <tr *ngFor="let c of comments">
+                                   <td>{{c.username}}</td>
+                                   <td>{{c.comment}}</td>
+                              </tr>
+                         </tbody>
+                    </table>
+               </div>
           </div>
      </div>
 </main>
