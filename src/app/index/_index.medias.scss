@@ -1,3 +1,9 @@
+@media (max-width: 1024px) {
+    #overlay {
+        padding-top: 20px;
+    }
+}
+
 @media (max-width: 768px) {    
     .continent-title {
         h2 {
@@ -5,11 +11,25 @@
             padding: 0 0 .5rem;
         }
     }
+
+    #overlay {
+        padding-top: 15px;
+
+        h1 {
+            font-size: 4.4rem;
+        }
+    }
 }
 
 @media (max-width: 400px) {    
     .continent-title {
         h2 {
+            font-size: 3.3rem;
+        }
+    }
+
+    #overlay {
+        h1 {
             font-size: 3.3rem;
         }
     }
